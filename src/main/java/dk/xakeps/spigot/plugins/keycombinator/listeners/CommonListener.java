@@ -80,9 +80,7 @@ public class CommonListener implements Listener {
         if(event.getSequence() instanceof NamedKeySequence) {
             NamedKeySequence namedKeySequenceImpl = (NamedKeySequence) event.getSequence();
             if(event.getPlayer().hasPermission("keycombinator.sequence." + namedKeySequenceImpl.getName())) {
-                namedKeySequenceImpl.getCommandsHolders().forEach(commandsHolder -> {
-                    commandsHolder.execute(event.getPlayer());
-                });
+                namedKeySequenceImpl.getCommandsHolders().forEach(commandsHolder -> commandsHolder.execute(event.getPlayer()));
             }
         }
     }
