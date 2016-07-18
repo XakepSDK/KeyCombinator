@@ -1,0 +1,6 @@
+name: KeyCombinator
+main: dk.xakeps.spigot.plugins.keycombinator.KeyCombinator
+version: 0.1
+author: [Xakep_SDK]
+description: Key combinations and command for combinations
+softdepend: [PlaceholderAPI]
