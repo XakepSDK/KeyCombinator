@@ -1,6 +1,6 @@
 package dk.xakeps.spigot.plugins.keycombinator.events;
 
-import dk.xakeps.spigot.plugins.keycombinator.models.Keys;
+import dk.xakeps.spigot.plugins.keycombinator.models.Key;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -13,9 +13,9 @@ public class PlayerKeyPressEvent extends Event {
     }
 
     private final Player player;
-    private final Keys key;
+    private final Key key;
 
-    public PlayerKeyPressEvent(Player player, Keys key) {
+    public PlayerKeyPressEvent(Player player, Key key) {
         super(true);
         this.player = player;
         this.key = key;
@@ -29,7 +29,7 @@ public class PlayerKeyPressEvent extends Event {
         return player;
     }
 
-    public Keys getKey() {
+    public Key getKey() {
         return key;
     }
 

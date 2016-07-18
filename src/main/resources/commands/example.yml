@@ -1,4 +1,4 @@
-name: example
-commands:
-  - executor: PLAYER
-    command: 'say %player_name% executed %sequence%!'
+PLAYER:
+  - 'say %player_name% executed %keycombinator_last_sequence%!'
+CONSOLE:
+  - 'say %player_name% hahaha!'
