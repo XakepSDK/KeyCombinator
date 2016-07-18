@@ -2,8 +2,11 @@ package dk.xakeps.spigot.plugins.keycombinator.listeners;
 
 import dk.xakeps.spigot.plugins.keycombinator.KeyCombinator;
 import dk.xakeps.spigot.plugins.keycombinator.events.PlayerKeyPressEvent;
+import dk.xakeps.spigot.plugins.keycombinator.models.Command;
+import dk.xakeps.spigot.plugins.keycombinator.models.KeySequence;
 import dk.xakeps.spigot.plugins.keycombinator.models.Keys;
 import dk.xakeps.spigot.plugins.keycombinator.models.KeysPressed;
+import dk.xakeps.spigot.plugins.keycombinator.utils.SequenceUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,6 +15,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.event.player.PlayerToggleSprintEvent;
 
+import java.util.List;
 import java.util.Map;
 
 public class CommonListener implements Listener {
@@ -56,6 +60,12 @@ public class CommonListener implements Listener {
     @EventHandler
     public void onPlayerKeyPress(PlayerKeyPressEvent event) {
         playerKeysPressed.get(event.getPlayer()).pressKey(event.getKey());
+        List<KeySequence> sequences = KeyCombinator.getInstance().getSequences();
+        KeysPressed keysPressed = playerKeysPressed.get(event.getPlayer());
+        if(SequenceUtils.getPassed(sequences, keysPressed).size() == 1) {
+            List<Command> commands = sequences.get(0).getCommands();
+
+        }
     }
 
     private void callKeyPressEvent(Player presser, Keys key) {

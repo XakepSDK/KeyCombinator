@@ -12,8 +12,8 @@ public class PlayerKeyPressEvent extends Event {
         handlers = new HandlerList();
     }
 
-    private Player player;
-    private Keys key;
+    private final Player player;
+    private final Keys key;
 
     public PlayerKeyPressEvent(Player player, Keys key) {
         super(true);

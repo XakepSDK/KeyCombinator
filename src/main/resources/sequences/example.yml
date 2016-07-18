@@ -1,3 +1,7 @@
-- name: 'Example'
-  commands:
-  - 'say ${player} '
+name: 'Example'
+commands:
+- example
+sequence:
+- RMB_AIR
+- SPRINT
+- SNEAK

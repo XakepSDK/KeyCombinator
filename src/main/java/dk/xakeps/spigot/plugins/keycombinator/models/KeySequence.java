@@ -4,8 +4,14 @@ import java.util.List;
 
 public class KeySequence {
     private String name;
-    private List<String> commands;
+    private List<Command> commands;
     private List<Keys> sequence;
+
+    public KeySequence(String name, List<Command> commands, List<Keys> sequence) {
+        this.name = name;
+        this.commands = commands;
+        this.sequence = sequence;
+    }
 
     public String getName() {
         return name;
@@ -15,11 +21,11 @@ public class KeySequence {
         this.name = name;
     }
 
-    public List<String> getCommands() {
+    public List<Command> getCommands() {
         return commands;
     }
 
-    public void setCommands(List<String> commands) {
+    public void setCommands(List<Command> commands) {
         this.commands = commands;
     }
 

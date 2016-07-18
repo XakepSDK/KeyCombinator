@@ -1,0 +1,4 @@
+name: example
+commands:
+  - executor: PLAYER
+    command: 'say %player_name% executed %sequence%!'

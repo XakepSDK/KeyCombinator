@@ -1,17 +1,13 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/workspace.xml
 .idea/tasks.xml
 .idea/dictionaries
-.idea/vcs.xml
 .idea/jsLibraryMappings.xml
 .idea/dataSources.ids
 .idea/dataSources.xml
 .idea/dataSources.local.xml
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
-.idea/uiDesigner.xml
 .idea/gradle.xml
-.idea/libraries
 .idea/mongoSettings.xml
 *.iws
 /out/
@@ -36,3 +32,8 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+.gitignore
+.idea/
+KeyCombinator.iml
+pom.xml
+src/
